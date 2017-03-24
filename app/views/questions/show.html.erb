@@ -1,0 +1,17 @@
+<div class="theater-header">
+  <div class="theater-info">
+    <h1><%=@question.title%> </h1>
+    <p><%=@question.body%></p>
+  </div>
+
+
+<% @answers.each do |answer| %>
+<%= answer.user.first_name %>
+<%= answer.title %>
+<%= answer.body %>
+<% end %>
+
+  <div class="theater-rating-form">
+    <%= render "answers/answer_form", question: @question, answer: @answer %>
+    <div id='answer'></div>
+  </div>

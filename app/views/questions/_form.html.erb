@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add a Question</title>
+  </head>
+  <body>
+    <%= form_for(question, html: {:multipart => true }) do |f| %>
+      <% if question.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+          <ul>
+            <% question.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class= "form">
+        <div class="field">
+          <%= f.label :title%>
+          <%= f.text_field :title %><br>
+
+          <%= f.label :body%>
+          <%= f.text_field :body %><br>
+        </div>
+        <div class="actions">
+          <%= f.submit "Add Question" %><br><br>
+        </div>
+      </div>
+    <% end %>
+  </body>
+</html>

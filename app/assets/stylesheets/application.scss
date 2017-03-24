@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+  background-color: #282828;
+}
+html {
+background-color: #282828;
+}
+.form-group{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+.form-control{
+  position: auto;
+  margin:auto;
+  width: 40%;
+  padding: 10px;
+}
+.navbar-form.navbar-left{
+  position: auto;
+  margin:auto;
+  width: 40%;
+  padding: 10px;
+}
+.col-md-6{
+  background-color: #282828;
+}
+.container {
+  margin: auto;
+  margin-top: -20px;
+}
+
+.card-img-top{
+  position: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px #888888;
+  width: 40%;
+}
+
+.card{
+  border-radius: 10px;
+  background-color: #E8ECED;
+  margin: auto;
+}
+
+.card-title{
+  text-align: center;
+  margin: auto;
+  padding: 2px;
+}
+
+.card-text{
+  text-align: center;
+  margin: auto;
+  padding: 2px;
+}
