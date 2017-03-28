@@ -1,9 +1,7 @@
 class House < ApplicationRecord
   validates :name, presence: true
   validates :region, presence: true
-  validates :overlord
-  validates :currentlord
-  validates :cadetbranch
+  
 
   has_many :characters, through: :roles
 
