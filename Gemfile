@@ -21,10 +21,7 @@ gem 'figaro'
 gem 'fog'
 gem 'devise'
 gem 'sendgrid-ruby'
-gem 'kaminari'
-gem "cancan"
 gem 'simple_form'
-gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -32,8 +29,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'shoulda'
-  gem 'factory_girl_rails'
+  gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem "dotenv-rails"

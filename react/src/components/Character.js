@@ -6,44 +6,46 @@ class Character extends React.Component {
   }
 
   render (){
-    const style = {
-    width: '40rem',
+
+  let image = this.props.name.replace(/ /g,"_");
+
+  const divStyle = {
+  padding: "30px",
+  margin: "40px",
   };
 
+  const cardstyle = {
+  padding: "30px",
+  margin: "20px",
+  };
 
-
-  if(this.props.image == null){
   return(
-    <div className="card" style={style}>
-
-      <div className="card-block">
-        <h4 className="card-title">{this.props.name}</h4>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      <ul className="list-group list-group-flush">
-        <li className="list-group-item"> House: {this.props.house}</li>
-        <li className="list-group-item"> Titles: {this.props.titles}</li>
-      </ul>
-    </div>
-
-  )
-} else {
-    return(
-      <div className="card" style={style}>
-        <img className="card-img-top" src={`https://api.got.show/${this.props.image}`} alt="Card image cap"/>
-        <div className="card-block">
-          <br></br>
-          <h4 className="card-title">{this.props.name}</h4>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div className="row" >
+    <br></br>
+    <br></br>
+      <div className="col s3" style={divStyle}>
+        <div className="card horizontal" style={cardstyle}>
+        <div className="card-stacked">
+        <div className="card-content">
+        <h1>Name: </h1> <h5>{this.props.name}</h5>
+        <br></br>
+        <h1>Culture: </h1> <h5>{this.props.culture}</h5>
+        <br></br>
+        <h1>Aliases: </h1> <h5>{this.props.aliases}</h5>
+        <br></br>
+        <h1>Allegiances: </h1> <h5>{this.props.allegiances}</h5>
+        <br></br>
         </div>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item"> House: {this.props.house}</li>
-          <li className="list-group-item"> Titles: {this.props.titles}</li>
-        </ul>
+        </div>
+        </div>
       </div>
-
-      )
-    }
+      <div className="col s9" style={divStyle}>
+        <div className="imageBio" >
+      <img src={`https://api.got.show//misc/images/characters/${image}.jpeg`} alt="Image not Found" style={divStyle} className="card horizontal"/>
+      </div>
+    </div>
+  </div>
+    )
   }
 }
 export default Character;

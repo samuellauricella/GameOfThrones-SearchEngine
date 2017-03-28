@@ -1,17 +1,37 @@
-<div class="theater-header">
-  <div class="theater-info">
-    <h1><%=@question.title%> </h1>
-    <p><%=@question.body%></p>
-  </div>
-
-
-<% @answers.each do |answer| %>
-<%= answer.user.first_name %>
-<%= answer.title %>
-<%= answer.body %>
-<% end %>
-
-  <div class="theater-rating-form">
-    <%= render "answers/answer_form", question: @question, answer: @answer %>
-    <div id='answer'></div>
-  </div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+        .message {margin-bottom: 15px; }
+        .image {float:left; margin-right: 10px; }
+        .title {float:left; font-weight:bold; color:#009; margin-bottom: 5px; }
+        .content { margin-left: 30px}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="theater-header">
+      <div class="theater-info">
+        <h1><%=@question.title%> </h1>
+        <p><%=@question.body%></p>
+      </div>
+    </div>
+    <div>
+      <% @answers.each do |answer| %>
+        <div class="message">
+            <div class="title"><%= answer.title %> </div>
+            <div> By: <%= answer.user.first_name%></div>
+            <div style="clear:both"></div>
+            <div class="content"><%= answer.body %></div>
+        </div>
+      <% end %>
+    </div>
+    <div class="">
+      <%= render "answers/answer_form", question: @question, answer: @answer %>
+      <div id='answer'></div>
+    </div>
+  </body>
+</html>

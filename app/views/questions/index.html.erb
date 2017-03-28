@@ -1,9 +1,25 @@
-<%= link_to "Add New Question", new_question_path %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Discussion Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="discussion.scss">
+  </head>
+  <body>
+    <div class="button">
+    <%= link_to "Add New Question", new_question_path, class:"waves-effect waves-light btn" %>
+    </div>
+    <% @questions.each do |question| %>
 
-
-
-<% @questions.each do |question| %>
-
-<%= link_to question.title, question_path(question) %>
-
-<% end %>
+    <ul class="collection">
+       <li class="collection-item avatar">
+         <img src="http://icons.iconarchive.com/icons/limav/game-of-thrones/512/Stark-icon.png" alt="" class="circle">
+         <span class="title"><%= link_to question.title, question_path(question) %></span>
+       </li>
+     </ul>
+     <% end %>
+  </body>
+</html>

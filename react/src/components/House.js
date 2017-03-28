@@ -37,5 +37,3 @@ class House extends React.Component {
 }
 }
 export default House;
-//       <img src={`https://api.got.show//misc/images/houses/House_Farwynd.png`}/>
-// <img src={`https://api.got.show/${this.props.image}`}/>

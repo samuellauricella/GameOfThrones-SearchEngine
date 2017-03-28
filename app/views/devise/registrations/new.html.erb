@@ -1,29 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="signup.scss" >
 
+  </head>
+  <body>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
       <%= devise_error_messages! %>
-      <div id="form">
-      <div class="field">
-        <%= f.label :first_name, "First Name"%><br />
-        <%= f.text_field :first_name, autofocus: true%>
-        <%= f.label :last_name, "Last Name" %><br />
-        <%= f.text_field :last_name, autofocus: true%>
-        <%= f.label :email, class:"label" %><br />
-        <%= f.email_field :email, autofocus: true %>
-        <%= f.label :password, class:"label" %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-        <%= f.label :password_confirmation, "Password Confirmation"%><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-
-
-
-      <div class="actions">
-        <%= f.submit "Sign Up" %>
+      <div class="signupheader">
+      <h1>Sign Up </h1>
       </div>
-      </div>
+      <div class="row">
+        <form class="col s12">
+          <div class="overinput">
+            <div class="input">
+              <%= f.text_field :first_name, autofocus: true%>
+              <%= f.label :first_name, class:"validate"%><br />
+
+              <%= f.text_field :last_name, autofocus: true%>
+              <%= f.label :last_name, class:"validate" %><br />
+
+              <%= f.email_field :email, autofocus: true %>
+              <%= f.label :email, class:"validate" %><br />
+
+
+              <%= f.password_field :password, autocomplete: "off" %>
+              <%= f.label :password, class:"validate" %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              <%= f.label :password_confirmation, class:"validate"%><br />
+
+            </div>
+          </div>
+        </form>
+        <br>
+        <div class="row">
+          <div class="input-field inline">
+            <%= f.submit "Sign Up", class:"waves-effect waves-light btn" %>
+          </div>
+        </div>
+    </div>
     <% end %>
     <div class="loginlink">
       <%= render "devise/shared/links" %><br>
     </div>
+  </body>
+</html>
