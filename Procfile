@@ -1,1 +1,1 @@
-web: bundle exec rackup -s puma -p $PORT $RAILS_ENV -C config/puma.rb
+web: bundle exec rackup -s puma -p ${PORT:-3000} -E ${RACK_ENV:-development}
