@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="showpage.scss" >
   </head>
   <body>
     <div class="theater-header">
@@ -22,7 +23,7 @@
     <div>
       <% @answers.each do |answer| %>
         <div class="message">
-            <div class="title"><%= answer.title %> </div>
+            <div class="title"><%= answer.title %> </div><br>
             <div> By: <%= answer.user.first_name%></div>
             <div style="clear:both"></div>
             <div class="content"><%= answer.body %></div>
