@@ -22,6 +22,8 @@ gem 'fog'
 gem 'devise'
 gem 'sendgrid-ruby'
 gem 'simple_form'
+gem "dotenv-rails"
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -32,7 +34,6 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
-  gem "dotenv-rails"
 end
 
 group :development do
