@@ -1,0 +1,514 @@
+/* line 1, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.card {
+  background-color: blue;
+  box-shadow: 0 0 6px #B2B2B2;
+}
+
+/* line 7, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+h3 {
+  width: auto;
+  height: auto;
+  margin: 1px;
+  padding: 1px;
+  word-wrap: break-word;
+}
+
+/* line 13, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.small-2.columns {
+  width: 10%;
+  height: auto;
+}
+
+/* line 19, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.small-10.small-centered.columns {
+  overflow: hidden;
+}
+
+/* line 24, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.large-2.large-centered.columns {
+  padding: 10px;
+}
+
+/* line 29, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.large-4.columns {
+  border-radius: 5px;
+  box-shadow: 0 0 6px #B2B2B2;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  vertical-align: top;
+}
+
+/* line 38, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.small-13.columns {
+  padding: 9px;
+}
+
+/* line 42, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.small-20.small-centered.columns {
+  background-color: white;
+}
+
+/* line 46, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/discussion.scss */
+.small-7.large-centered.columns {
+  padding-right: 200px;
+}
+/* line 1, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.signup-panel {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 30px;
+}
+/* line 7, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.signup-panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+/* line 13, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.signup-panel form input, .signup-panel form span {
+  height: 50px;
+}
+/* line 18, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.signup-panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+/* line 23, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.signup-panel p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-left: 66%;
+}
+/* line 28, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.signup-panel .button {
+  margin-left: 35%;
+}
+
+/* line 34, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.button {
+  text-align: center;
+}
+
+/* line 37, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.large-6.large-centered.columns {
+  width: 900px;
+}
+
+/* line 41, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.signup-panel {
+  background-color: white;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* line 47, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/edit.scss */
+.back {
+  text-align: center;
+}
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+/* line 5, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FBFBF3;
+}
+/* line 10, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card .title {
+  line-height: 3rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-color: #FBFBF3;
+}
+/* line 17, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card .content {
+  padding: 1.3rem;
+  font-weight: 300;
+  background-color: #FBFBF3;
+}
+/* line 23, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card p {
+  margin: 0;
+}
+/* line 26, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card .action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 1.3rem;
+}
+/* line 30, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card a {
+  color: #ffab40;
+  margin-right: 1.3rem;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* line 37, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card .image {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #FBFBF3;
+}
+/* line 43, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card .image .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.3rem;
+  color: #fff;
+}
+/* line 50, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.card .image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #FBFBF3;
+}
+
+/* line 62, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.small-8.large-centered.columns {
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* line 70, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.small-6.large-centered.columns {
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  background-color: #FBFBF3;
+  padding: 20px;
+}
+
+/* line 77, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.input-group {
+  height: auto;
+  margin: 0 auto;
+  padding-left: 100px;
+  position: relative;
+}
+
+/* line 84, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 88, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.small-3.small-centered.columns {
+  padding: 15px;
+}
+
+/* line 93, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/home.scss */
+.row {
+  padding: 65px;
+}
+/* line 1, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/login.scss */
+.p {
+  text-align: center;
+}
+/* line 1, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.post-panel {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 30px;
+}
+/* line 7, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.post-panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+/* line 13, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.post-panel form input, .post-panel form span {
+  height: 50px;
+}
+/* line 18, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.post-panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+/* line 23, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.post-panel p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-left: 25%;
+}
+/* line 28, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.post-panel .button {
+  margin-left: 35%;
+}
+
+/* line 35, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.large-6.large-centered.columns {
+  width: 900px;
+}
+
+/* line 39, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/post.scss */
+.post-panel {
+  background-color: white;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 1, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.response-panel {
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 5px;
+}
+/* line 8, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.response-panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+/* line 14, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.response-panel form input, .response-panel form span {
+  height: 10px;
+}
+/* line 19, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.response-panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+/* line 24, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.response-panel p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-left: 25%;
+}
+/* line 29, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.response-panel .button {
+  margin-left: 35%;
+}
+
+/* line 36, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.large-6.large-centered.columns {
+  width: 900px;
+}
+
+/* line 41, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/response.scss */
+.response-panel {
+  background-color: white;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 1, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+i.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #ebebeb;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -16px;
+}
+
+/* line 12, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+i.icon::before {
+  content: "";
+  display: block;
+  background: #c2c2c2;
+  width: 10px;
+  height: 10px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  top: 5px;
+}
+
+/* line 24, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+i.icon::after {
+  content: "";
+  display: block;
+  background: #c2c2c2;
+  width: 20px;
+  height: 10px;
+  border-radius: 1000px 1000px 0 0;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  top: 15px;
+}
+
+/* line 38, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+h6.byline {
+  padding-left: 40px;
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+/* line 44, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+h6.byline .data {
+  font-weight: 400;
+}
+
+/* line 47, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+h6.byline .label {
+  font-size: 60%;
+}
+
+/* line 51, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+.indented.comment {
+  padding-left: 15px;
+  border-left: 1px solid #ebebeb;
+}
+
+/* line 56, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+.push {
+  margin-bottom: 40px;
+}
+
+/* line 60, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/showpage.scss */
+.bullets {
+  margin-left: 30px;
+}
+/* line 1, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.signup-panel {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 30px;
+}
+/* line 7, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.signup-panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+/* line 13, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.signup-panel form input, .signup-panel form span {
+  height: 50px;
+}
+/* line 18, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.signup-panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+/* line 23, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.signup-panel p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-left: 25%;
+}
+/* line 28, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.signup-panel .button {
+  margin-left: 35%;
+}
+
+/* line 34, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.button {
+  text-align: center;
+}
+
+/* line 37, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.large-6.large-centered.columns {
+  width: 900px;
+}
+
+/* line 41, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/signup.scss */
+.signup-panel {
+  background-color: white;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+img{
+font-size: 250%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 20, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.row {
+  max-width: 100%;
+}
+
+/* line 24, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.menu {
+  background-color: #292c2f;
+  padding: 1.5rem 3rem;
+  height: auto;
+}
+/* line 28, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.menu .inline-list {
+  text-align: center;
+}
+/* line 30, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.menu .inline-list li {
+  float: none;
+  padding: 5px;
+  display: inline-block;
+}
+/* line 35, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.menu .inline-list a {
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+/* line 38, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.menu .inline-list a:hover {
+  color: #C2BAA8;
+  transition: all .3s ease-in-out;
+}
+/* line 43, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.menu .inline-list .active a {
+  color: #C2BAA8;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 24, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+  .menu {
+    height: 5rem;
+  }
+  /* line 49, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+  .menu .inline-list {
+    float: right;
+  }
+  /* line 52, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+  .menu a:hover {
+    border-bottom: 2px solid #C2BAA8;
+  }
+}
+
+/* line 58, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.name {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+/* line 64, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+.name i {
+  color: #C2BAA8;
+  margin-right: 0.5rem;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 58, /Users/samuellauricella/Documents/MyProject/app/assets/stylesheets/application.scss */
+  .name {
+    float: left;
+  }
+}
