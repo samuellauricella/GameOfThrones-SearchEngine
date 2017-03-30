@@ -2,13 +2,16 @@
   <head>
     <meta charset="utf-8">
     <title>Add a Question</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheets" href="signup.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
   </head>
   <body>
     <%= form_for(question, html: {:multipart => true }) do |f| %>
       <% if question.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
-
           <ul>
             <% question.errors.full_messages.each do |message| %>
               <li><%= message %></li>
@@ -16,18 +19,27 @@
           </ul>
         </div>
       <% end %>
-      <div class= "form">
-        <div class="field">
-          <%= f.label :title%>
-          <%= f.text_field :title %><br>
-
-          <%= f.label :body%>
-          <%= f.text_field :body %><br>
-        </div>
-        <div class="actions">
-          <%= f.submit "Add Question" %><br><br>
-        </div>
-      </div>
-    <% end %>
+      <div class="row">
+         <div class="large-6 large-centered columns">
+           <div class="post-panel">
+             <form>
+               <div class="row collapse">
+                 <div class="small-12 large-centered columns">
+                   <%= f.text_area :title, placeholder:"Title"%>
+                 </div>
+               </div>
+               <div class="row collapse">
+                 <div class="small-12 large-centered columns">
+                   <%= f.text_area :body, placeholder:"Describe your post" %>
+                 </div>
+                   <div class="small-4 small-centered columns">
+                   <%= f.submit "Submit" , class:"button"%>
+                 </div>
+               </div>
+               <% end %>
+             </form>
+           </div>
+         </div>
+       </div>
   </body>
 </html>

@@ -1,24 +1,48 @@
+.signup-panel{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 30px;
 
-.loginlink{
+  i{
+    font-size: 30px;
+    line-height: 50px;
+    color: #999;
+  }
+  form{
+    input, span{
+    height: 50px;
+  }
+
+  }
+  .welcome{
+    font-size: 26px;
     text-align: center;
+    margin-left: 0;
+  }
+  p{
+    font-size: 13px;
+    font-weight: 200;
+    margin-left: 25%;
+  }
+  .button{
+    margin-left: 35%;
+  }
+
 }
 
-.col.s12{
-  padding: 2px;
-  display: block;
-  position: absolute;
-
-  margin: auto;
+.button{
   text-align: center;
 }
-
-.input{
-  padding: 10px;
-  margin: auto;
-  text-align: center;
+.large-6.large-centered.columns{
+  width: 900px;
 }
 
-.signupheader{
-  text-align: center;
+.signup-panel{
+  background-color: white;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
 
+}
+
+.prefix{
 }

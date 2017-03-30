@@ -2,37 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <style>
-        .message {margin-bottom: 15px; }
-        .image {float:left; margin-right: 10px; }
-        .title {float:left; font-weight:bold; color:#009; margin-bottom: 5px; }
-        .content { margin-left: 30px}
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="showpage.scss" >
+    <link rel="stylesheets" href="discussion.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
   </head>
-  <body>
-    <div class="theater-header">
-      <div class="theater-info">
-        <h1><%=@question.title%> </h1>
-        <p><%=@question.body%></p>
-      </div>
-    </div>
-    <div>
-      <% @answers.each do |answer| %>
-        <div class="message">
-            <div class="title"><%= answer.title %> </div><br>
-            <div> By: <%= answer.user.first_name%></div>
-            <div style="clear:both"></div>
-            <div class="content"><%= answer.body %></div>
+  <body style="background-color: #F8F8F8">
+    <div class="small-9 small-centered columns">
+      <br>
+      <div class="card" style="box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);">
+        <div class="medium-6 large-8 columns">
+          <h3><%=@question.title%></h3>
+          <div class="indented comment">
+            <p><%=@question.body%></p>
+          </div>
+          <br><br>
+          <% @answers.each do |answer| %>
+          <div class="indented comment">
+            <section class="top">
+              <h6 class="byline">
+                <i class="icon"></i><%= answer.user.first_name%>
+                <small>said
+                </small>
+              </h6>
+            </section>
+            <p><%= answer.body %></p>
+          </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
-    <div class="">
+      </div>
       <%= render "answers/answer_form", question: @question, answer: @answer %>
-      <div id='answer'></div>
     </div>
   </body>
 </html>

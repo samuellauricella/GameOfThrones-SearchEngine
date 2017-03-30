@@ -52,8 +52,9 @@ class CharacterList extends Component {
     return (
       <div>
         <SearchForm onSearch={this.getCharacters} />
-        <br></br>
+        
         {characters}
+
       </div>
     )
   }

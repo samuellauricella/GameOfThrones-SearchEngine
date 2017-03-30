@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Discussion Board</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
     <link rel="stylesheet" href="discussion.scss">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
   </head>
   <body>
-    <div class="button">
-    <%= link_to "Add New Question", new_question_path, class:"waves-effect waves-light btn" %>
-    </div>
-    <% @questions.each do |question| %>
-
-    <ul class="collection">
-       <li class="collection-item avatar">
-         <img src="http://icons.iconarchive.com/icons/limav/game-of-thrones/512/Stark-icon.png" alt="" class="circle">
-         <span class="title"><%= link_to question.title, question_path(question) %></span>
-       </li>
-     </ul>
-     <% end %>
+<div class="small-8 large-centered columns">
+    <table class="hover">
+      <thead>
+        <h1>Discussion Board</h1>
+      <center><%= link_to "Add New Question", new_question_path, class:"button", style:"box-shadow: 0px 5px 5px #282828" %></center>
+      </thead>
+      <tbody style="box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);">
+        <% @questions.each do |question| %>
+        <tr>
+          <td><%= link_to question.title, question_path(question) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
   </body>
 </html>

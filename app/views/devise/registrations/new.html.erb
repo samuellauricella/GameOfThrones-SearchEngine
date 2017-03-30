@@ -3,53 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="signup.scss" >
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheets" href="signup.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
   </head>
-  <body>
+  <body style="background-color: #F8F8F8">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
       <%= devise_error_messages! %>
-      <div class="signupheader">
-      <h1>Sign Up </h1>
-      </div>
+
       <div class="row">
-        <form class="col s12">
-          <div class="overinput">
-            <div class="input">
-              <%= f.text_field :first_name, autofocus: true%>
-              <%= f.label :first_name, class:"validate"%><br />
+         <div class="large-6 large-centered columns">
+           <div class="signup-panel">
+             <p class="welcome"> <h2><strong>Welcome! Please Sign Up!</strong></h2></p>
+             <form>
+               <div class="row collapse">
+                 <div class="small-2  columns">
+                   <span class="prefix"><i class="fi-torsos-male-female"></i></span>
+                 </div>
+                 <div class="small-10  columns">
+                   <%= f.text_field :first_name, autofocus: true, placeholder:"First Name"%>
+                 </div>
+               </div>
+               <div class="row collapse">
+                 <div class="small-2  columns">
+                   <span class="prefix"><i class="fi-torsos-male-female"></i></span>
+                 </div>
+                 <div class="small-10  columns">
+                   <%= f.text_field :last_name, autofocus: true, placeholder:"Last Name"%>
+                 </div>
+               </div>
+               <div class="row collapse">
+                 <div class="small-2 columns">
+                   <span class="prefix"><i class="fi-mail"></i></span>
+                 </div>
+                 <div class="small-10  columns">
+                   <%= f.email_field :email, autofocus: true, placeholder:"Email" %>
+                 </div>
+               </div>
+               <div class="row collapse">
+                 <div class="small-2 columns ">
+                   <span class="prefix"><i class="fi-lock"></i></span>
+                 </div>
+                 <div class="small-10 columns ">
+                   <%= f.password_field :password, autocomplete: "off", placeholder:"Password must be a minimum of 6 characters" %>
+                 <% if @minimum_password_length %>
+                 <em>(<%= @minimum_password_length %> characters minimum)</em>
+                 <% end %><br />
+                </div>
+               </div>
+               <div class="row collapse">
+                 <div class="small-2 columns ">
+                   <span class="prefix"><i class="fi-lock"></i></span>
+                 </div>
+                 <div class="small-10 columns ">
+                   <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password Confirmation" %>
+                </div>
+               </div>
+             </form>
+             <div class="small-5 small-centered columns">
+             <%= f.submit "Sign Up", class:"button"  %>
 
-              <%= f.text_field :last_name, autofocus: true%>
-              <%= f.label :last_name, class:"validate" %><br />
-
-              <%= f.email_field :email, autofocus: true %>
-              <%= f.label :email, class:"validate" %><br />
-
-
-              <%= f.password_field :password, autocomplete: "off" %>
-              <%= f.label :password, class:"validate" %>
-              <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
-
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
-              <%= f.label :password_confirmation, class:"validate"%><br />
-
+              <p><strong>Already have an account?<%= render "devise/shared/links" %> </strong> </p>
             </div>
-          </div>
-        </form>
-        <br>
-        <div class="row">
-          <div class="input-field inline">
-            <%= f.submit "Sign Up", class:"waves-effect waves-light btn" %>
-          </div>
+           </div>
+         </div>
         </div>
-    </div>
-    <% end %>
-    <div class="loginlink">
-      <%= render "devise/shared/links" %><br>
-    </div>
+      <% end %>
   </body>
 </html>

@@ -9,42 +9,30 @@ class Character extends React.Component {
 
   let image = this.props.name.replace(/ /g,"_");
 
-  const divStyle = {
-  padding: "30px",
-  margin: "40px",
-  };
 
-  const cardstyle = {
-  padding: "30px",
-  margin: "20px",
-  };
 
   return(
-    <div className="row" >
-    <br></br>
-    <br></br>
-      <div className="col s3" style={divStyle}>
-        <div className="card horizontal" style={cardstyle}>
-        <div className="card-stacked">
-        <div className="card-content">
-        <h1>Name: </h1> <h5>{this.props.name}</h5>
+    <div className="row">
+      <div className="small-6 large-centered columns">
         <br></br>
-        <h1>Culture: </h1> <h5>{this.props.culture}</h5>
-        <br></br>
-        <h1>Aliases: </h1> <h5>{this.props.aliases}</h5>
-        <br></br>
-        <h1>Allegiances: </h1> <h5>{this.props.allegiances}</h5>
-        <br></br>
+        <div className="card">
+          <div className="image">
+            <img src={`https://api.got.show//misc/images/characters/${image}.jpeg`}/>
+          </div>
+          <div className="content">
+            <ul>
+              <h1><b>{this.props.name}</b></h1>
+            <li><b>Aliases:</b> {this.props.aliases}</li>
+            <li><b>Culture:</b> {this.props.culture}</li>
+            <li><b>Allegiances:</b>{this.props.allegiances}</li>
+            </ul>
+          </div>
         </div>
-        </div>
-        </div>
+        <br></br>
       </div>
-      <div className="col s9" style={divStyle}>
-        <div className="imageBio" >
-      <img src={`https://api.got.show//misc/images/characters/${image}.jpeg`} alt="Image not Found" style={divStyle} className="card horizontal"/>
-      </div>
+      <br></br>
     </div>
-  </div>
+
     )
   }
 }

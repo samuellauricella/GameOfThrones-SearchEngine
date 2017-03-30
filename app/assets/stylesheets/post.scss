@@ -1,4 +1,4 @@
-.signup-panel{
+.post-panel{
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 15px;
@@ -23,7 +23,7 @@
   p{
     font-size: 13px;
     font-weight: 200;
-    margin-left: 66%;
+    margin-left: 25%;
   }
   .button{
     margin-left: 35%;
@@ -31,19 +31,13 @@
 
 }
 
-.button{
-  text-align: center;
-}
+
 .large-6.large-centered.columns{
   width: 900px;
 }
 
-.signup-panel{
+.post-panel{
   background-color: white;
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16), 0 20px 10px 0 rgba(0, 0, 0, 0.12);
 
-}
-
-.back{
-  text-align: center;
 }

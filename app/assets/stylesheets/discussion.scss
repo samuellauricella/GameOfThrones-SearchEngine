@@ -1,5 +1,52 @@
-.button{
+.card{
+  background-color: blue;
+  box-shadow: 0 0 6px #B2B2B2;
+
+}
+
+h3{
+  width:auto;
+  height:auto;
+  margin:1px; padding:1px;
+  word-wrap:break-word;}
+
+.small-2.columns{
+  width: 10%;
+   height: auto;
+}
+
+
+.small-10.small-centered.columns{
+  overflow: hidden;
+}
+
+
+.large-2.large-centered.columns{
   padding: 10px;
-  margin: auto;
-  text-align: center;
+}
+
+
+.large-4.columns{
+   border-radius: 5px;
+   box-shadow: 0 0 6px #B2B2B2;
+   display: inline-block;
+   padding: 10px 18px;
+   position: relative;
+   vertical-align: top;
+ }
+
+.small-13.columns{
+  padding: 9px;
+}
+
+.small-20.small-centered.columns{
+  background-color: white;
+}
+
+.small-7.large-centered.columns{
+  padding-right: 200px;
+}
+
+.button{
+
 }

@@ -3,49 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Edit User</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="edit.scss">
-
+    <link rel="stylesheets" href="edit.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
   </head>
   <body>
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
-
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
-      <div class="row">
-      <form class="col s12">
-        <div class="overinput">
-          <div class="input">
-            <%= f.input :email, required: true, autofocus: true, class:"validate", label: false %>
-
-            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-            <% end %>
-
-            <%= f.input :password, autocomplete: "off", required: false, class:"validate"%>
-            <%= f.input :password_confirmation, required: false, class:"validate" %>
-            <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, class:"validate"%>
+    <div class="row">
+       <div class="large-6 large-centered columns">
+         <div class="signup-panel">
+           <p class="welcome"> <h2 style="text-align: center"><strong>Edit Profile</strong></h2></p>
+           <form>
+             <div class="row collapse">
+               <div class="small-2 columns">
+                 <span class="prefix"><i class="fi-mail"></i></span>
+               </div>
+               <div class="small-10  columns">
+                 <%= f.input :email, autofocus: true,required: true, placeholder:"Email",label: false %>
+               </div>
+             </div>
+             <div class="row collapse">
+               <div class="small-2 columns ">
+                 <span class="prefix"><i class="fi-lock"></i></span>
+               </div>
+               <div class="small-10 columns ">
+                 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                   <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                 <% end %>
+                 <%= f.input :current_password, required: true, placeholder:"Current Password",label: false%>
+              </div>
+             </div>
+             <div class="row collapse">
+               <div class="small-2 columns ">
+                 <span class="prefix"><i class="fi-lock"></i></span>
+               </div>
+               <div class="small-10 columns">
+                 <%= f.input :password, autocomplete: "off", required: false, placeholder:"New Password",label: false%>
+              </div>
+             </div>
+             <div class="row collapse">
+               <div class="small-2 columns ">
+                 <span class="prefix"><i class="fi-lock"></i></span>
+               </div>
+               <div class="small-10 columns ">
+                 <%= f.input :password_confirmation, required: false, placeholder:"Confirm New Password",label: false%>
+              </div>
+             </div>
+           </form>
+           <div class="small-2 small-centered columns">
+           <%= f.button :submit, "Update", class:"button"  %>
+         </div>
+          <div class="small-4 small-centered columns" style="text-align: center">
+            <p><strong><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p></strong> </p>
+            <p><strong>  <%= link_to "Back", :back  %></p></strong> </p>
           </div>
-        </div>
-      </form>
-
-      <div class="form-inputs">
-        <br>
-        <%= f.button :submit, "Update", class:"waves-effect waves-light btn"  %>
+         </div>
+       </div>
       </div>
     <% end %>
-  </div>
 
-    <div class="cancel">
-    <h3>Cancel my account</h3>
-
-    <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"waves-effect waves-light btn" %></p>
-
-    <%= link_to "Back", :back %>
-
-    </div>
-    <br>
   </body>
 </html>

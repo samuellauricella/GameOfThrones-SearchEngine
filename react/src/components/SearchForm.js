@@ -24,9 +24,10 @@ export default class SearchForm extends Component {
 
   render() {
     return (
-      <div>
-      <form  onSubmit={this.handleSubmit} className="col s12">
-        <div className= "input-field inline" >
+     <div className="small-8 large-centered columns">
+      <div className="input-group">
+      <form  onSubmit={this.handleSubmit} className="input-group-field">
+        <div className= "toolbar-search">
         <label htmlFor="search"></label>
         <input type="search"
                className="validate"
@@ -34,12 +35,12 @@ export default class SearchForm extends Component {
                name="search"
                ref={(input) => this.query = input}
                placeholder="Search..." />
-             </div>
-          <br></br>
-        <button type="submit" id="submit" className="btn waves-effect waves-light">search</button>
+        </div>
       </form>
-      <br></br>
+      <div className="input-group-button"></div>
+      <button type="submit" id="submit" className="button"><i className="fi-magnifying-glass"></i></button>
       </div>
+    </div>
     );
   }
 }
