@@ -1,1 +1,17 @@
-<h1>Editing <%=@question.title%></h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+  </head>
+  <body>
+    <br>
+    <h1>Editing <%=@question.title%></h1>
+
+    <%= render 'form', question: @question %>
+
+    <h3 style="text-align:center"><%= link_to 'Back', @question %></h3>
+
+
+  </body>
+</html>

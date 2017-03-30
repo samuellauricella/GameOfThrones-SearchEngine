@@ -16,6 +16,10 @@
           <h3><%=@question.title%></h3>
           <div class="indented comment">
             <p><%=@question.body%></p>
+            <% if @creator == current_user %>
+            <%= link_to "Edit", edit_question_path(@question) %> |
+            <%= link_to "Remove #{@question.title}", @question, method: :delete%>
+            <% end %>
           </div>
           <br><br>
           <% @answers.each do |answer| %>
