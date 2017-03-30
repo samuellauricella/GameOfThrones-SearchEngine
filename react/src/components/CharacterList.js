@@ -31,9 +31,7 @@ class CharacterList extends Component {
   }
 
 
-
   render() {
-
     let characters = this.state.characters.map((character,index) => {
       return (
 
@@ -52,7 +50,7 @@ class CharacterList extends Component {
     return (
       <div>
         <SearchForm onSearch={this.getCharacters} />
-        
+
         {characters}
 
       </div>
