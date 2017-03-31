@@ -14,7 +14,10 @@
  *= require_self
  */
 
-
+.navfont{
+  font-family: 'Aladin', cursive;
+  font-size: 20px;
+}
 
   .row {
     max-width: 100%;
@@ -56,8 +59,9 @@
 
   .name {
     text-align: center;
-    font-size:  1.5rem;
-    line-height: 1;
+    font-family: 'Aladin', cursive;
+    font-size:  2.5rem;
+    line-height: 0;
     margin: 0 0 1rem 0;
     color: #fff;
     i {

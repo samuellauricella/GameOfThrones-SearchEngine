@@ -16,7 +16,7 @@ class Character extends React.Component {
 
         if (response.url === "https://api.got.show/doc/"){
           this.setState({
-            profimage: "http://static.srcdn.com/wp-content/uploads/game-of-thrones-the-iron-throne.jpg",
+            profimage: "https://j.gifs.com/xGWvQl.gif",
           });
         }else{
 
@@ -45,10 +45,10 @@ class Character extends React.Component {
           </div>
           <div className="content">
             <ul>
-              <h1><b>{this.props.name}</b></h1>
-            <li><b>Aliases:</b> {this.props.aliases}</li>
-            <li><b>Culture:</b> {this.props.culture}</li>
-            <li><b>Allegiances:</b>{this.props.allegiances}</li>
+              <h1 className="namefont"><b>{this.props.name}</b></h1>
+            <li className="detailsfont"><b>Aliases:</b> {this.props.aliases}</li>
+            <li className="detailsfont"><b>Culture:</b> {this.props.culture}</li>
+            <li className="detailsfont"><b>Allegiances:</b> {this.props.allegiances}</li>
             </ul>
           </div>
         </div>

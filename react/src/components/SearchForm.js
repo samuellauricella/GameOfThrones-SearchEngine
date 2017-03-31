@@ -37,7 +37,6 @@ export default class SearchForm extends Component {
                placeholder="Search..." />
         </div>
       </form>
-      <div className="input-group-button"></div>
       <button type="submit" id="submit" className="button" onClick={this.handleSubmit}><i className="fi-magnifying-glass"></i></button>
       </div>
     </div>
