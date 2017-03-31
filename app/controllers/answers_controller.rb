@@ -44,7 +44,7 @@ end
   def destroy
     @question = Question.find(params[:question_id])
     @answer = Answer.find_by(user: current_user, question: @question)
-    @question.destroy
+    @answer.destroy
     redirect_to question_path(@question), notice: 'Question was successfully Deleted.'
   end
 

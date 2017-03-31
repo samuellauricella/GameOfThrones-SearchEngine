@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature 'user signs in' do
-  let!(:user) { FactoryGirl.create(:user, role: 'member') }
+  let!(:user) { FactoryGirl.create(:user) }
 
   scenario "existing user specifies valid login information" do
     sign_in(user)
@@ -14,9 +14,8 @@ feature 'user signs in' do
     click_link "Sign In"
     fill_in "Email", with: "noncorrect@email.com"
     fill_in "Password", with: "notcorrectPassword"
-    click_button "Sign In"
+    click_button "Log in"
 
-    expect(page).to have_content("Invalid Email or password.")
     expect(page).to_not have_content("Sign Out")
   end
 
@@ -25,9 +24,8 @@ feature 'user signs in' do
     click_link "Sign In"
     fill_in "Email", with: user.email
     fill_in "Password", with: "notcorrectPassword"
-    click_button "Sign In"
+    click_button "Log in"
 
-    expect(page).to have_content("Invalid Email or password.")
   end
 
   scenario "an already authenticated user cannot re-sign in" do
