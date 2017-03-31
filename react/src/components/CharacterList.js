@@ -8,11 +8,13 @@ class CharacterList extends Component {
     super(props);
     this.state = {
       characters: [],
+      currentPage: 1,
+      charactersPerPage: 5
       };
     this.getCharacters = this.getCharacters.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+
   }
-
-
 
   getCharacters(query) {
     axios.get(`https://simple-search-service-wadewilson-1833.mybluemix.net/search?q="${query}"`)
@@ -30,11 +32,19 @@ class CharacterList extends Component {
     this.getCharacters();
   }
 
+  handleClick(event) {
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
+  }
+
 
   render() {
-    let characters = this.state.characters.map((character,index) => {
+    let indexOfLastCharacter = this.state.currentPage * this.state.charactersPerPage;
+    let indexOfFirstCharacter = indexOfLastCharacter - this.state.charactersPerPage;
+    let currentCharacters = this.state.characters.slice(indexOfFirstCharacter, indexOfLastCharacter);
+    let characters = currentCharacters.map((character,index) => {
       return (
-
         <Character
           key = {character._id}
           name={character.name}
@@ -44,16 +54,32 @@ class CharacterList extends Component {
           actor = {character.played_by}
           aliases = {character.aliases.join(', ')}
           />
-        );
+      );
     });
-
-    return (
-      <div>
-        <SearchForm onSearch={this.getCharacters} />
-
-        {characters}
-
-      </div>
+    let pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(this.state.characters.length / this.state.charactersPerPage); i++){
+      pageNumbers.push(i);}
+      let renderPageNumbers = pageNumbers.map(number => {
+        return (
+          <li
+            key={number}
+            id={number}
+            onClick={this.handleClick}
+            className="button">
+            {number}
+          </li>
+        );
+      });
+      return (
+        <div>
+          <SearchForm onSearch={this.getCharacters} />
+          {characters}
+          <div className="small-7 large-7 columns">
+            <ul className="pagination" role="navigation" aria-label="Pagination">
+              <li className="">{renderPageNumbers}</li>
+            </ul>
+          </div>
+        </div>
     )
   }
 };
