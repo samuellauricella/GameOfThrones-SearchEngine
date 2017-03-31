@@ -32,6 +32,10 @@
               </h6>
             </section>
             <p><%= answer.body %></p>
+            <% if @creator == current_user %>
+            <%= link_to "Edit", edit_question_answer_path(@question) %>
+            <% end %>
+
           </div>
           <% end %>
         </div>
