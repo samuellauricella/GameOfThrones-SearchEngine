@@ -33,7 +33,9 @@
             </section>
             <p><%= answer.body %></p>
             <% if @creator == current_user %>
-            <%= link_to "Edit", edit_question_answer_path(@question) %>
+            <%= link_to "Edit Comment", edit_question_answer_path(@question,answer) %>
+            <%= link_to "Remove Comment", question_answer_path(@question,answer), method: :delete%>
+
             <% end %>
 
           </div>
