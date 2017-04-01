@@ -6,12 +6,13 @@
   </head>
   <body style="background-color: #F8F8F8">
     <br>
+    <div class="editpost">
     <h1>Editing <%=@question.title%></h1>
 
     <%= render 'form', question: @question %>
 
     <h3 style="text-align:center"><%= link_to 'Back', @question %></h3>
 
-
+  </div>
   </body>
 </html>

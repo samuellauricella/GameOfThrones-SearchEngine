@@ -9,9 +9,11 @@
   </head>
   <body style="background-color: #F8F8F8">
     <br>
+    <div class="postform">
     <h1>New Post</h1>
     <%= render 'form', question: @question %>
     <h3 style="text-align:center"><%= link_to 'Back', questions_path %></h3>
     <br>
+  </div>
   </body>
 </html>
