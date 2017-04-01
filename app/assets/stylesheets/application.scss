@@ -13,62 +13,34 @@
  *= require_tree .
  *= require_self
  */
-
-.navfont{
-  font-family: 'Aladin', cursive;
-  font-size: 20px;
+.top-bar-right{
+background-color: #282828
 }
 
-  .row {
-    max-width: 100%;
-  }
-
-  .menu {
-    background-color: #292c2f;
-    padding: 1.5rem 3rem;
+  .menu.vertical{
     height: auto;
-    .inline-list {
-      text-align: center;
-      li {
-        float: none;
-        padding: 5px;
-        display: inline-block;
-      }
-      a {
-        color: #fff;
-        padding-bottom: 0.5rem;
-        &:hover {
-          color: #C2BAA8;
-          transition: all .3s ease-in-out;
-        }
-      }
-      .active a {
-        color: #C2BAA8;
-      }
-    }
-    @media only screen and (min-width: 40.063em) {
-    height: 5rem;
-    .inline-list {
-      float: right;
-      }
-      a:hover {
-        border-bottom: 2px solid #C2BAA8
-      }
-    }
   }
 
-  .name {
-    text-align: center;
-    font-family: 'Aladin', cursive;
-    font-size:  2.5rem;
-    line-height: 0;
-    margin: 0 0 1rem 0;
-    color: #fff;
-    i {
-      color: #C2BAA8;
-      margin-right: 0.5rem;
-    }
-    @media only screen and (min-width: 40.063em) {
-      float: left;
-    }
-  }
+
+.top-bar{
+  height: auto;
+}
+
+.links{
+  color: #F8F8F8;
+  font-size: 19px;
+}
+.links:hover,.links:focus{
+  color: red;
+}
+
+.small-3.small-push-1.columns{
+  padding-top: 5px;
+}
+
+.fi-crown{
+  padding: 10px;
+  color: #F8F8F8;
+  width: 200%;
+  height: auto;
+}

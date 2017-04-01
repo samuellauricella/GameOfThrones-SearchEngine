@@ -146,5 +146,12 @@ h1{
     box-shadow: 1px 1px 3px #000;
 }
 .close:hover {
-    background: #00d9ff;
+    background: red;
+}
+
+.button.round{
+  background: #282828;
+}
+.button.round:hover{
+  background: red;
 }

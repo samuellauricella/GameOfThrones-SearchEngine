@@ -65,7 +65,7 @@ class CharacterList extends Component {
             key={number}
             id={number}
             onClick={this.handleClick}
-            className="button">
+            className="button round">
             {number}
           </li>
         );
