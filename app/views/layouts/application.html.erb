@@ -8,23 +8,38 @@
     <%= stylesheet_link_tag    'application',  :media => "all" %>
     <%= javascript_include_tag 'application' %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.dropdownMenu.js"></script>
   </head>
   <body>
-    <nav class="menu">
-      <h1 class="name"><i class="fi-crown"></i> GOT-search</h1>
-      <ul class="inline-list">
-        <li><%= link_to "Home", root_path, class:"navfont"  %></li>
-        <li><%= link_to "Discussion Board", questions_path, class:"navfont" %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "User Profile", edit_user_registration_path, class:"navfont" %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navfont" %></li>
-        <%- else -%>
-        <li><%= link_to "Sign In", new_user_session_path, class:"navfont" %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path, class:"navfont" %></li>
-      </ul>
-      <%end%>
-    </nav>
+    <div class="top-bar" id="" data-animate="hinge-in-from-top spin-out" style="background-color: #282828">
+    <div class="small-3 small-push-1 columns"><i class="fi-crown"></i><%= link_to "GOT-search", root_path, class:"links"%></div>
+      <div class="top-bar-right" style="background-color: #282828">
+        <ul class="dropdown menu" data-dropdown-menu style="background-color: #282828">
+          <li><%= link_to "Discussion Board", questions_path, class:"links" %></li>
+          <li>
+            <% if user_signed_in? %>
+            <a href="#" class="links">Account Settings</a>
+            <%- else -%>
+            <a href="#" class="links">Create Account</a>
+            <% end %>
+            <ul class="menu vertical" style="background-color: #282828">
+              <% if user_signed_in? %>
 
+              <li></li>
+              <li><%= link_to "User Profile", edit_user_registration_path, class:"links" %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"links"%></li>
+              <%- else -%>
+              <li><%= link_to "Sign In", new_user_session_path, class:"links" %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path, class:"links" %></li>
+            </ul>
+            <%end%>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+    $(document).foundation();
+    </script>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
   </body>
