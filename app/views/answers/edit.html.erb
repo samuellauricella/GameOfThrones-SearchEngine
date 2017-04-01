@@ -5,13 +5,12 @@
     <title>Edit</title>
   </head>
   <body style="background-color: #F8F8F8">
-    <br>
-    <h1>Edit Comment</h1>
+    <div class ="editcomment">
+      <h1>Edit Comment</h1>
 
-    <%= render 'answer_form', question: @question, answer: @answer %>
+      <%= render 'answer_form', question: @question, answer: @answer %>
 
-    <h3 style="text-align:center"><%= link_to 'Back', @question %></h3>
-
-
+      <h3 style="text-align:center"><%= link_to 'Back', @question %></h3>
+    </div>
   </body>
 </html>

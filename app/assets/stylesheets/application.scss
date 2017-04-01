@@ -23,7 +23,12 @@ background-color: #282828
 
 
 .top-bar{
-  height: auto;
+  height: 60px;
+  width: calc(103vw - 30px);
+  background-color: #B2D490;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
 }
 
 .links{

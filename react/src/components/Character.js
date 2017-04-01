@@ -39,6 +39,7 @@ class Character extends React.Component {
     <div className="row">
       <div className="small-6 large-centered columns">
         <br></br>
+        <div className="cardHover">
         <div className="card">
           <div className="image">
             <img src={profilepicture}/>
@@ -53,6 +54,7 @@ class Character extends React.Component {
           </div>
         </div>
         <br></br>
+      </div>
       </div>
       <br></br>
     </div>

@@ -8,14 +8,90 @@
     <link rel="stylesheets" href="home.scss">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.orbit.js"></script>
   </head>
+  <br><br>
   <body style="background-color: #F8F8F8">
     <div class="small-3 small-centered columns">
   <a href="#openModal"> <img src="http://logos-download.com/wp-content/uploads/2016/09/Game_of_Thrones_logo_logotype_wordmark.png" alt="Not Available" style="width:100;height:100px;"></a>
     </div>
 
+    <ul class="slides">
+        <input type="radio" name="radio-btn" id="img-1" checked />
+        <li class="slide-container">
+    		<div class="slide">
+    			<img src="http://www.wallpapermade.com/images/wallpapers/originals/daenerys-targaryen-emilia-clarke-game-of-thrones-4k-portrait-wallpaper-6171.jpg" />
+            </div>
+    		<div class="nav">
+    			<label for="img-6" class="prev">&#x2039;</label>
+    			<label for="img-2" class="next">&#x203a;</label>
+    		</div>
+        </li>
 
+        <input type="radio" name="radio-btn" id="img-2" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="http://backgrounds4k.net/wp-content/uploads/2016/01/Game-of-Thrones-photos.jpg" />
+            </div>
+    		<div class="nav">
+    			<label for="img-1" class="prev">&#x2039;</label>
+    			<label for="img-3" class="next">&#x203a;</label>
+    		</div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-3" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQxNTY3NzEzN15BMl5BanBnXkFtZTgwNzgyMDM2ODE@._V1_.jpg" />
+            </div>
+    		<div class="nav">
+    			<label for="img-2" class="prev">&#x2039;</label>
+    			<label for="img-4" class="next">&#x203a;</label>
+    		</div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-4" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="http://www.wallpapermade.com/images/wallpapers/originals/sandor-the-hound-clegane-rory-mccann-game-of-thrones-4k-portrait-wallpaper-6160.jpg" />
+            </div>
+    		<div class="nav">
+    			<label for="img-3" class="prev">&#x2039;</label>
+    			<label for="img-5" class="next">&#x203a;</label>
+    		</div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-5" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="http://wallup.net/wp-content/uploads/2016/05/02/43255-anime-Game_of_Thrones-Brandon_Stark-Cersei_Lannister-Jaime_Lannister-Tyrion_Lannister-Daenerys_Targaryen-Arya_Stark-Sansa_Stark-Robb_Stark-Catelyn_Stark-Joffrey_Baratheon-The_Hound-Jon_Snow.jpg" />
+            </div>
+    		<div class="nav">
+    			<label for="img-4" class="prev">&#x2039;</label>
+    			<label for="img-6" class="next">&#x203a;</label>
+    		</div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-6" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="https://wallpaperscraft.com/image/game_of_thrones_lena_headey_cersei_lannister_94601_3840x2160.jpg" />
+            </div>
+    		<div class="nav">
+    			<label for="img-5" class="prev">&#x2039;</label>
+    			<label for="img-1" class="next">&#x203a;</label>
+    		</div>
+        </li>
+
+        <li class="nav-dots">
+          <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+          <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+          <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+          <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+          <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+          <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+        </li>
+    </ul>
     <div id="openModal" class="modalDialog">
       <div>	<a href="#close" title="Close" class="close">X</a>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/E_84ZhuEx4c" frameborder="0" allowfullscreen></iframe>      </div>
@@ -23,7 +99,10 @@
 
     <br>
     <div>
-      <div id="characters">
+  <a href="#open"><div id="characters"></a>
+      </div>
+      <div id="open" class="modalDialog">
+        <div>	<a href="#close" title="Close" class="close">X</a>
       </div>
     </div>
     <br>
